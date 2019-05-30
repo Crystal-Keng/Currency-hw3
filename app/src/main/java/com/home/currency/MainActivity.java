@@ -15,22 +15,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edNtd = findViewById(R.id.ntd); 
+        edNtd = findViewById(R.id.ntd);
     }
 
     public void go(View view) {
         String ntdS = edNtd.getText().toString();
         if (ntdS.equals("")) {
             new AlertDialog.Builder(this)
-                    .setTitle("Problem")
-                    .setMessage("Please enter you NTD amount")
-                    .setPositiveButton("OK", null)
+                    .setTitle(R.string.promlem)
+                    .setMessage(R.string.please_enter_ntd)
+                    .setPositiveButton(R.string.ok, null)
                     .show();
         } else {
             new AlertDialog.Builder(this)
-                    .setTitle("Result")
-                    .setMessage("USD is " + Float.parseFloat(ntdS) * 30.9f)
-                    .setPositiveButton("OK", null)
+                    .setTitle(R.string.result)
+                    .setMessage(getString(R.string.usd_is) + Float.parseFloat(ntdS) * 30.9f)
+                    .setPositiveButton(R.string.ok, null)
                     .show();
         }
     }
