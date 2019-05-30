@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         edNtd = findViewById(R.id.ntd);
-
     }
 
     public void go(View view) {
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             new AlertDialog.Builder(this)
                     .setTitle("Result")
-                    .setMessage("USD is " + Float.parseFloat(ntdS)*30.9f)
+                    .setMessage("USD is " + Float.parseFloat(ntdS) * 30.9f)
                     .setPositiveButton("OK", null)
                     .show();
         }
